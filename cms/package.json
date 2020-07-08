@@ -1,0 +1,37 @@
+{
+  "name": "guava-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "CMS and admin interface for Guava to the People website",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "strapi": "3.0.5",
+    "strapi-admin": "3.0.5",
+    "strapi-utils": "3.0.5",
+    "strapi-plugin-content-type-builder": "3.0.5",
+    "strapi-plugin-content-manager": "3.0.5",
+    "strapi-plugin-users-permissions": "3.0.5",
+    "strapi-plugin-email": "3.0.5",
+    "strapi-plugin-upload": "3.0.5",
+    "strapi-connector-bookshelf": "3.0.5",
+    "knex": "<0.20.0",
+    "sqlite3": "latest"
+  },
+  "author": {
+    "name": "Emily Zhai"
+  },
+  "strapi": {
+    "uuid": "7229db51-1dff-4c68-ba95-c98dd605a4d0"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
