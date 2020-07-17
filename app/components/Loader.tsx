@@ -9,7 +9,7 @@ const Background = styled(animated.div)({
   backgroundColor: 'white',
 });
 
-const Content = styled.div({
+const TextContainer = styled.div({
   position: 'absolute',
   display: 'flex',
   height: '100%',
@@ -17,24 +17,29 @@ const Content = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   '> div': {
-    marginTop: -25,
+    height: '36vw',
   },
 });
 
 const Text = styled(animated.div)({
-  height: 140,
-  marginTop: -25,
-  lineHeight: '140px',
+  height: '8vw',
   fontFamily: 'Work Sans',
-  fontSize: 144,
+  fontSize: '10vw',
   color: 'white',
 });
+
+const Content = styled.div(({ isLoading }: { isLoading: boolean }) => ({
+  height: isLoading ? '100vh' : 'auto',
+  overflowY: 'hidden',
+}));
 
 interface Props {
   children: React.ReactChild | React.ReactChild[];
 }
 
-const Loader = ({ children }: Props) => {  
+const Loader = ({ children }: Props) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   const backgroundFlyInRef = useRef();
   const backgroundFlyInProps = useSpring({
     to: { height: '100%' }, 
@@ -45,8 +50,8 @@ const Loader = ({ children }: Props) => {
   const textRef = useRef();
   const text = ['BLACK', 'TRANS', 'LIVES', 'MATTER'];
   const trail = useTrail(text.length, {
-    to: { opacity: 0, x: 35, height: 0 },
-    from: { opacity: 1, x: 0, height: 140 },
+    to: { opacity: 0, x: 4, height: '0vw' },
+    from: { opacity: 1, x: 0, height: '10vw' },
     ref: textRef,
   });
 
@@ -55,6 +60,7 @@ const Loader = ({ children }: Props) => {
     to: { opacity: 0 },
     from: { opacity: 1 },
     ref: backgroundFadeOutRef,
+    onRest: () => setIsLoading(false),
   });
 
   useChain([backgroundFlyInRef, textRef, backgroundFadeOutRef], [0, 1.2, 2]);
@@ -70,12 +76,12 @@ const Loader = ({ children }: Props) => {
           }}
         />
       </Background>
-      <Content>
+      <TextContainer>
         <div>
           {trail.map(({ x, height, ...rest }: any, index: number) => (
             <Text
               key={index}
-              style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}px,0)`) }} 
+              style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}vw,0)`) }} 
             >
               <animated.div style={{ height, overflowY: 'hidden' }}>
                 {text[index]}
@@ -83,8 +89,10 @@ const Loader = ({ children }: Props) => {
             </Text>
           ))}
         </div>
+      </TextContainer>
+      <Content isLoading={isLoading}>
+        {children}
       </Content>
-      <>{children}</>
     </>
   );
 };
