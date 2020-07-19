@@ -6,12 +6,13 @@ class Document extends NextDocument {
     return (
       <Html>
         <Head>
-          <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Open+Sans&family=Work+Sans:wght@900&display=swap" rel="stylesheet" />
           <Global
             styles={{
               'html, body, #__next': {
                 height: '100%',
                 margin: 0,
+                fontFamily: 'Open Sans, sans-serif',
               },
             }}
           />

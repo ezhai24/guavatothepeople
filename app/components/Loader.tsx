@@ -2,6 +2,10 @@ import React, { useState, useRef } from 'react';
 import { useSpring, useTrail, useChain, animated } from 'react-spring';
 import styled from '@emotion/styled';
 
+const LoaderComponent = styled.div(({ isLoading }: { isLoading: boolean }) => ({
+  display: isLoading ? 'block' : 'none',
+}));
+
 const Background = styled(animated.div)({
   position: 'absolute',
   height: '100%',
@@ -67,29 +71,31 @@ const Loader = ({ children }: Props) => {
 
   return (
     <>
-      <Background style={{ ...backgroundFadeOutProps }}>
-        <animated.div
-          style={{
-            backgroundColor: 'black',
-            ...backgroundFlyInProps,
-            ...backgroundFadeOutProps
-          }}
-        />
-      </Background>
-      <TextContainer>
-        <div>
-          {trail.map(({ x, height, ...rest }: any, index: number) => (
-            <Text
-              key={index}
-              style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}vw,0)`) }} 
-            >
-              <animated.div style={{ height, overflowY: 'hidden' }}>
-                {text[index]}
-              </animated.div>
-            </Text>
-          ))}
-        </div>
-      </TextContainer>
+      <LoaderComponent isLoading={isLoading}>
+        <Background style={{ ...backgroundFadeOutProps }}>
+          <animated.div
+            style={{
+              backgroundColor: 'black',
+              ...backgroundFlyInProps,
+              ...backgroundFadeOutProps
+            }}
+          />
+        </Background>
+        <TextContainer>
+          <div>
+            {trail.map(({ x, height, ...rest }: any, index: number) => (
+              <Text
+                key={index}
+                style={{ ...rest, transform: x.interpolate(x => `translate3d(0,${x}vw,0)`) }} 
+              >
+                <animated.div style={{ height, overflowY: 'hidden' }}>
+                  {text[index]}
+                </animated.div>
+              </Text>
+            ))}
+          </div>
+        </TextContainer>
+      </LoaderComponent>
       <Content isLoading={isLoading}>
         {children}
       </Content>

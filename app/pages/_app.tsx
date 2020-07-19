@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Loader } from '~/components';
+import { Loader, Navigation } from '~/components';
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -10,6 +10,7 @@ const App = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Loader>
+        <Navigation />
         <Component { ...pageProps } />
       </Loader>
     </>
