@@ -1,8 +1,9 @@
 import React from 'react';
+import { PageTitle } from '~/components';
 
 const Connect = () => {
   return (
-    <div>Connect</div>
+    <PageTitle>Connect</PageTitle>
   );
 };
 

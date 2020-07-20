@@ -1,8 +1,9 @@
 import React from 'react';
+import { PageTitle } from '~/components';
 
 const BLM = () => {
   return (
-    <div>BLM Resources</div>
+    <PageTitle>BLM Resources</PageTitle>
   );
 };
 

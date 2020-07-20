@@ -1,8 +1,11 @@
 import React from 'react';
+import { PageTitle } from '~/components';
 
 const About = () => {
   return (
-    <div>About</div>
+    <>
+      <PageTitle>About Us</PageTitle>
+    </>
   );
 };
 

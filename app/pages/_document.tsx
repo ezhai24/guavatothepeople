@@ -14,6 +14,9 @@ class Document extends NextDocument {
                 margin: 0,
                 fontFamily: 'Open Sans, sans-serif',
               },
+              'h1, h2': {
+                fontFamily: 'Inconsolata, sans-serif',
+              },
             }}
           />
         </Head>

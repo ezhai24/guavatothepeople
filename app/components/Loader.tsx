@@ -7,6 +7,7 @@ const LoaderComponent = styled.div(({ isLoading }: { isLoading: boolean }) => ({
 }));
 
 const Background = styled(animated.div)({
+  zIndex: 1,
   position: 'absolute',
   height: '100%',
   width: '100%',
@@ -14,6 +15,7 @@ const Background = styled(animated.div)({
 });
 
 const TextContainer = styled.div({
+  zIndex: 1,
   position: 'absolute',
   display: 'flex',
   height: '100%',

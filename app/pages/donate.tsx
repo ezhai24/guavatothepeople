@@ -1,8 +1,9 @@
 import React from 'react';
+import { PageTitle } from '~/components';
 
 const Donate = () => {
   return (
-    <div>Donate</div>
+    <PageTitle>Donate</PageTitle>
   );
 };
 
