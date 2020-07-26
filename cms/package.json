@@ -11,24 +11,23 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "knex": "<0.20.0",
-    "pg": "^8.3.0",
-    "sqlite3": "latest",
     "strapi": "3.0.5",
     "strapi-admin": "3.0.5",
-    "strapi-connector-bookshelf": "3.0.5",
-    "strapi-plugin-content-manager": "3.0.5",
+    "strapi-utils": "3.0.5",
     "strapi-plugin-content-type-builder": "3.0.5",
+    "strapi-plugin-content-manager": "3.0.5",
+    "strapi-plugin-users-permissions": "3.0.5",
     "strapi-plugin-email": "3.0.5",
     "strapi-plugin-upload": "3.0.5",
-    "strapi-plugin-users-permissions": "3.0.5",
-    "strapi-utils": "3.0.5"
+    "strapi-connector-bookshelf": "3.0.5",
+    "knex": "<0.20.0",
+    "pg": "latest"
   },
   "author": {
     "name": "Emily Zhai"
   },
   "strapi": {
-    "uuid": "7229db51-1dff-4c68-ba95-c98dd605a4d0"
+    "uuid": "cfb5a354-cae8-4f1d-98d8-72029a3a8183"
   },
   "engines": {
     "node": ">=10.0.0",
