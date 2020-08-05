@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_hero_sections",
+  "info": {
+    "name": "HeroSection",
+    "icon": "camera"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "actionText": {
+      "type": "string"
+    },
+    "actionLink": {
+      "type": "string"
+    }
+  }
+}
