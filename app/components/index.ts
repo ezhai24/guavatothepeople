@@ -6,3 +6,4 @@ export const PageTitle = styled.h1({
 
 export { default as Loader } from './Loader';
 export { default as Navigation } from './Navigation';
+export { default as PageFactory } from './PageFactory';
