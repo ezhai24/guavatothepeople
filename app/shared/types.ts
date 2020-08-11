@@ -11,7 +11,7 @@ interface Image {
   url: string;
 }
 
-interface HeroSection extends BaseSection {
+export interface HeroSection extends BaseSection {
   title: string;
   subtitle: string;
   actionLink: string;

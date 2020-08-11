@@ -9,7 +9,6 @@ import { Loader, Navigation } from '~/components';
 const Content = styled(animated.div)({
   position: 'absolute',
   width: '100%',
-  padding: '0 10%',
   boxSizing: 'border-box',
 });
 

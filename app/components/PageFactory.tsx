@@ -10,7 +10,7 @@ interface Props {
 const PageFactory = ({ section }: Props) => {
   switch (section.__component) {
     case ComponentType.HERO_SECTION:
-      return <HeroSection />;
+      return <HeroSection content={section} />;
   }
 };
 
