@@ -38,7 +38,6 @@ interface Props {
 }
 
 const HeroSection = ({ content }: Props) => {
-  console.log(content)
   const { image, title, subtitle } = content;
   const { url } = image;
   return (

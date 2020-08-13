@@ -7,7 +7,7 @@ const routes = {
 };
 
 const contentRoute = (pageRoute: string) => {
-  const baseUrl = 'http://localhost:1337/pages?type=';
+  const baseUrl = `${process.env.CMS_BASE}/pages?type=`;
   switch (pageRoute) {
     case routes.home:
       return baseUrl + 'home';
