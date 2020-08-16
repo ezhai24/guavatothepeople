@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
+import { Button } from '~/components';
 import { mq } from '~/shared/styles';
 import { HeroSection as HeroSectionType } from '~/shared/types';
 
@@ -15,7 +16,7 @@ const Hero = styled.div(({ backgroundUrl }: { backgroundUrl: string }) => ({
   justifyContent: 'center',
   textAlign: 'center',
   [mq[0]]: {
-    height: 300,
+    height: 400,
   },
 }));
 
@@ -29,8 +30,13 @@ const Title = styled.h1({
 });
 
 const Subtitle = styled.p({
+  width: '60%',
   margin: 5,
   color: 'white',
+});
+
+const CTA = styled.div({
+  marginTop: 20,
 });
 
 interface Props {
@@ -38,12 +44,17 @@ interface Props {
 }
 
 const HeroSection = ({ content }: Props) => {
-  const { image, title, subtitle } = content;
+  const { image, title, subtitle, actionLink, actionText } = content;
   const { url } = image;
   return (
     <Hero backgroundUrl={url}>
       <Title>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
+      <CTA>
+        <Button fill href={actionLink}>
+          {actionText}
+        </Button>
+      </CTA>
     </Hero>
   );
 };
