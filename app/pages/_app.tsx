@@ -7,7 +7,6 @@ import styled from '@emotion/styled';
 import { Loader, Navigation } from '~/components';
 
 const Content = styled(animated.div)({
-  position: 'absolute',
   width: '100%',
   boxSizing: 'border-box',
 });
@@ -21,7 +20,7 @@ const App = ({ Component, pageProps }) => {
   const transitions = useTransition(pages, page => page.pathname, {
     config: { mass: 1, tension: 300, friction: 26 },
     from: { opacity: 0, delayDummy: 0 } as CSSProperties,
-    enter: [{ delayDummy: 0.1 }, { opacity: 1 }] as CSSProperties[],
+    enter: [{ delayDummy: 1 }, { opacity: 1 }] as CSSProperties[],
     leave: [{ opacity: 0 }],
   });
   
