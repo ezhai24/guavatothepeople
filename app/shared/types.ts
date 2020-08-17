@@ -1,14 +1,23 @@
+interface Image {
+  url: string;
+}
+
+export enum ImageAlignment {
+  LEFT = 'left',
+  RIGHT = 'right',
+}
+
+/**
+ * SECTIONS
+ */
 export enum ComponentType {
-  HERO_SECTION = 'sections.hero-section'
+  HERO_SECTION = 'sections.hero-section',
+  TEXT_SECTION = 'sections.text-section',
 }
 
 interface BaseSection {
   id: number;
   __component: ComponentType;
-}
-
-interface Image {
-  url: string;
 }
 
 export interface HeroSection extends BaseSection {
@@ -19,4 +28,11 @@ export interface HeroSection extends BaseSection {
   image: Image;
 }
 
-export type PageSection = HeroSection;
+export interface TextSection extends BaseSection {
+  title?: string;
+  text: string;
+  image?: Image;
+  alignImage?: ImageAlignment;
+}
+
+export type PageSection = HeroSection | TextSection;

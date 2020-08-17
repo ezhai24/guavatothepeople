@@ -1,7 +1,12 @@
 import React from 'react';
 
-import { HeroSection } from './sections';
-import { PageSection, ComponentType } from '../shared/types';
+import { HeroSection, TextSection } from './sections';
+import {
+  PageSection,
+  ComponentType,
+  HeroSection as HeroSectionContent,
+  TextSection as TextSectionContent,
+} from '../shared/types';
 
 interface Props {
   section: PageSection;
@@ -10,7 +15,9 @@ interface Props {
 const PageFactory = ({ section }: Props) => {
   switch (section.__component) {
     case ComponentType.HERO_SECTION:
-      return <HeroSection content={section} />;
+      return <HeroSection content={section as HeroSectionContent} />;
+    case ComponentType.TEXT_SECTION:
+      return <TextSection content={section as TextSectionContent} />;
   }
 };
 
