@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sections_text_sections",
+  "info": {
+    "name": "TextSection",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "alignImage": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

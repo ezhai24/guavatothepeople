@@ -23,7 +23,8 @@
     "content": {
       "type": "dynamiczone",
       "components": [
-        "sections.hero-section"
+        "sections.hero-section",
+        "sections.text-section"
       ]
     }
   }
