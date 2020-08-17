@@ -22,9 +22,9 @@ interface BaseSection {
 
 export interface HeroSection extends BaseSection {
   title: string;
-  subtitle: string;
-  actionLink: string;
-  actionText: string;
+  subtitle?: string;
+  actionLink?: string;
+  actionText?: string;
   image: Image;
 }
 

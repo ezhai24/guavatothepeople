@@ -50,11 +50,13 @@ const HeroSection = ({ content }: Props) => {
     <Hero backgroundUrl={url}>
       <Title>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
-      <CTA>
-        <Button fill href={actionLink}>
-          {actionText}
-        </Button>
-      </CTA>
+      {actionLink && actionText &&
+        <CTA>
+          <Button fill href={actionLink}>
+            {actionText}
+          </Button>
+        </CTA>
+      }
     </Hero>
   );
 };
