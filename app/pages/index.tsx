@@ -11,7 +11,7 @@ interface Props {
 
 const Home = (props: Props) => {
   const { content } = props;
-  return content.map(section => <PageFactory key={section.id} section={section} />);
+  return content.map((section, index) => <PageFactory key={index} section={section} />);
 };
 
 export const getStaticProps = async () => {

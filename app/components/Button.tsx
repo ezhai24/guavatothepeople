@@ -5,12 +5,12 @@ import styled from '@emotion/styled';
 import routes from '~/shared/routes';
 import { colors } from '~/shared/styles';
 
-const ButtonContainer = styled.div(({ fill }: { fill: boolean }) => ({
+const ButtonContainer = styled.div(({ primary }: { primary: boolean }) => ({
   border: `3px solid ${colors.primary}`,
   padding: '5px 30px',
-  backgroundColor: fill ? colors.primary : 'transparent',
+  backgroundColor: primary ? colors.primary : 'transparent',
   fontWeight: 700,
-  color: fill ? 'white' : colors.primary,
+  color: primary ? 'white' : colors.primary,
   textTransform: 'uppercase',
   cursor: 'pointer',
 }));
@@ -18,19 +18,19 @@ const ButtonContainer = styled.div(({ fill }: { fill: boolean }) => ({
 interface Props {
   href: string;
   children: string | React.ReactChild | React.ReactChild[];
-  fill?: boolean;
+  primary?: boolean;
 }
 
 export const Button = (props: Props) => {
-  const { href, children, fill } = props;
+  const { href, children, primary } = props;
   const isExternal = Object.values(routes).every(route => route !== href);
   return (isExternal ?
     <a href={href}>
-      <ButtonContainer fill={fill}>{children}</ButtonContainer>
+      <ButtonContainer primary={primary}>{children}</ButtonContainer>
     </a>
   :
     <Link href={href}>
-      <ButtonContainer fill={fill}>{children}</ButtonContainer>
+      <ButtonContainer primary={primary}>{children}</ButtonContainer>
     </Link>
   );
 };

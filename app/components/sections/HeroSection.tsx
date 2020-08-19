@@ -52,7 +52,7 @@ const HeroSection = ({ content }: Props) => {
       <Subtitle>{subtitle}</Subtitle>
       {actionLink && actionText &&
         <CTA>
-          <Button fill href={actionLink}>
+          <Button primary href={actionLink}>
             {actionText}
           </Button>
         </CTA>
