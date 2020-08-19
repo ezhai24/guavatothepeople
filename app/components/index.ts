@@ -5,6 +5,7 @@ export const PageTitle = styled.h1({
 });
 
 export { default as Button } from './Button';
+export { default as Link } from './Link';
 
 export { default as Loader } from './Loader';
 export { default as Navigation } from './Navigation';
