@@ -12,6 +12,7 @@ export enum ImageAlignment {
  */
 export enum ComponentType {
   HERO_SECTION = 'sections.hero-section',
+  SUMMARY_SECTION = 'sections.summary-section',
   TEXT_SECTION = 'sections.text-section',
 }
 
@@ -26,6 +27,13 @@ export interface HeroSection extends BaseSection {
   actionLink?: string;
   actionText?: string;
   image: Image;
+}
+
+export interface SummarySection extends BaseSection {
+  title: string;
+  text: string;
+  actionLink?: string;
+  actionText?: string;
 }
 
 export interface TextSection extends BaseSection {
