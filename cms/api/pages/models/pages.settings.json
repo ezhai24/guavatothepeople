@@ -24,7 +24,8 @@
       "type": "dynamiczone",
       "components": [
         "sections.hero-section",
-        "sections.text-section"
+        "sections.text-section",
+        "sections.summary-section"
       ]
     }
   }
