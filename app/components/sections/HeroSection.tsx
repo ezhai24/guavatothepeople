@@ -9,6 +9,7 @@ const Hero = styled.div(({ backgroundUrl }: { backgroundUrl: string }) => ({
   display: 'flex',
   flexDirection: 'column',
   height: 500,
+  marginBottom: 60,
   backgroundImage: `url(${backgroundUrl})`,
   backgroundPosition: 'top',
   backgroundSize: 'cover',
