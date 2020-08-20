@@ -14,6 +14,7 @@ export enum ComponentType {
   HERO_SECTION = 'sections.hero-section',
   SUMMARY_SECTION = 'sections.summary-section',
   TEXT_SECTION = 'sections.text-section',
+  GRID_SECTION = 'sections.grid-section',
 }
 
 interface BaseSection {
@@ -43,4 +44,16 @@ export interface TextSection extends BaseSection {
   alignImage?: ImageAlignment;
 }
 
-export type PageSection = HeroSection | TextSection;
+export interface RowCell extends BaseSection {
+  title: string;
+  subtitle?: string;
+  text: string;
+  actionLink?: string;
+  actionText?: string;
+}
+
+export interface RowSection extends BaseSection {
+  cells: RowCell[];
+}
+
+export type PageSection = HeroSection | SummarySection | TextSection | RowSection;
