@@ -6,6 +6,7 @@ import routes from '~/shared/routes';
 import { colors } from '~/shared/styles';
 
 const ButtonContainer = styled.div(({ primary }: { primary: boolean }) => ({
+  display: 'inline-block',
   border: `3px solid ${colors.primary}`,
   padding: '5px 30px',
   backgroundColor: primary ? colors.primary : 'transparent',

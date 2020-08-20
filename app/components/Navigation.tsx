@@ -21,6 +21,7 @@ const Menu = styled.div({
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
+  margin: '0 auto',
   '& a': {
     display: 'flex',
     margin: '8px 15px',
@@ -54,6 +55,9 @@ const Navigation = () => {
         </Link>
         <Link href={routes.connect}>
           <a>Connect</a>
+        </Link>
+        <Link href={routes.order}>
+          <a>Order</a>
         </Link>
         <Link href={routes.donate}>
           <a>Donate</a>
