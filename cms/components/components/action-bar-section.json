@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_action_bar_sections",
+  "info": {
+    "name": "RowCell",
+    "icon": "border-style"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "actionLink": {
+      "type": "string",
+      "required": false
+    },
+    "actionText": {
+      "type": "string"
+    }
+  }
+}

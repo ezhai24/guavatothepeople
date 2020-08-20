@@ -25,7 +25,8 @@
       "components": [
         "sections.hero-section",
         "sections.text-section",
-        "sections.summary-section"
+        "sections.summary-section",
+        "sections.grid-section"
       ]
     }
   }

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_grid_sections",
+  "info": {
+    "name": "RowSection",
+    "icon": "border-all"
+  },
+  "options": {},
+  "attributes": {
+    "cells": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.action-bar-section",
+      "required": true,
+      "max": 3
+    }
+  }
+}
