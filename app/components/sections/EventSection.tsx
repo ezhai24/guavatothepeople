@@ -29,8 +29,8 @@ const Event = (event: EventType) => {
 
   const day = moment(date).format('MMM D');
   const year = moment(date).format('YYYY');
-  const formattedStartTime = moment(startTime, 'HH:mm:ss').format('H:mma');
-  const formattedEndTime = moment(endTime, 'HH:mm:ss').format('H:mma');
+  const formattedStartTime = moment(startTime, 'HH:mm:ss').format('h:mma');
+  const formattedEndTime = moment(endTime, 'HH:mm:ss').format('h:mma');
 
   return (
     <EventContainer>
