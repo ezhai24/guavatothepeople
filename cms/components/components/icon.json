@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_components_icons",
+  "info": {
+    "name": "Icon",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "instagram",
+        "facebook",
+        "twitter",
+        "email",
+        "patreon",
+        "cashapp",
+        "venmo"
+      ],
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

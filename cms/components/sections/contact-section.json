@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_contact_sections",
+  "info": {
+    "name": "ContactSection",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "contacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.contact",
+      "required": true
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.icon"
+    }
+  }
+}

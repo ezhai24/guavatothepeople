@@ -27,7 +27,8 @@
         "sections.text-section",
         "sections.summary-section",
         "sections.grid-section",
-        "sections.event-section"
+        "sections.event-section",
+        "sections.contact-section"
       ]
     }
   }
