@@ -32,6 +32,7 @@ export enum ComponentType {
   GRID_SECTION = 'sections.grid-section',
   EVENT_SECTION = 'sections.event-section',
   CONTACT_SECTION = 'sections.contact-section',
+  DONATION_SECTION = 'sections.donation-section',
 }
 
 interface BaseSection {
@@ -96,6 +97,12 @@ export interface Contact {
 export interface ContactSection extends BaseSection {
   contacts: Contact[];
   socials?: Icon[];
+}
+
+export interface DonationSection extends BaseSection {
+  organizationName: string;
+  organizationLink?: string;
+  socials: Icon[];
 }
 
 export type PageSection =

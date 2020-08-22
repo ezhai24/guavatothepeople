@@ -7,6 +7,7 @@ import {
   RowSection,
   EventSection,
   ContactSection,
+  DonationSection,
 } from './sections';
 import {
   PageSection,
@@ -17,6 +18,7 @@ import {
   RowSection as RowSectionContent,
   EventSection as EventSectionContent,
   ContactSection as ContactSectionContent,
+  DonationSection as DonationSectionContent,
 } from '../shared/types';
 
 interface Props {
@@ -37,6 +39,8 @@ const PageFactory = ({ section }: Props) => {
       return <EventSection content={section as EventSectionContent} />;
     case ComponentType.CONTACT_SECTION:
       return <ContactSection content={section as ContactSectionContent} />;
+    case ComponentType.DONATION_SECTION:
+      return <DonationSection content={section as DonationSectionContent} />;
   }
 };
 
