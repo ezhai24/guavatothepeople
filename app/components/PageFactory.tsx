@@ -1,6 +1,12 @@
 import React from 'react';
 
-import { HeroSection, SummarySection, TextSection, RowSection } from './sections';
+import {
+  HeroSection,
+  SummarySection,
+  TextSection,
+  RowSection,
+  EventSection,
+} from './sections';
 import {
   PageSection,
   ComponentType,
@@ -8,6 +14,7 @@ import {
   SummarySection as SummarySectionContent,
   TextSection as TextSectionContent,
   RowSection as RowSectionContent,
+  EventSection as EventSectionContent,
 } from '../shared/types';
 
 interface Props {
@@ -24,6 +31,8 @@ const PageFactory = ({ section }: Props) => {
       return <TextSection content={section as TextSectionContent} />;
     case ComponentType.GRID_SECTION:
       return <RowSection content={section as RowSectionContent} />;
+    case ComponentType.EVENT_SECTION:
+      return <EventSection content={section as EventSectionContent} />
   }
 };
 

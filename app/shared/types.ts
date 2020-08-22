@@ -15,6 +15,7 @@ export enum ComponentType {
   SUMMARY_SECTION = 'sections.summary-section',
   TEXT_SECTION = 'sections.text-section',
   GRID_SECTION = 'sections.grid-section',
+  EVENT_SECTION = 'sections.event-section',
 }
 
 interface BaseSection {
@@ -54,6 +55,21 @@ export interface RowCell {
 
 export interface RowSection extends BaseSection {
   cells: RowCell[];
+}
+
+export interface Event {
+  title: string;
+  date: Date;
+  startTime: Date;
+  endTime?: Date;
+  location?: string;
+  eventLink?: string;
+}
+
+export interface EventSection extends BaseSection {
+  title?: string;
+  subtitle?: string;
+  events: Event[];
 }
 
 export type PageSection = HeroSection | SummarySection | TextSection | RowSection;
