@@ -72,4 +72,9 @@ export interface EventSection extends BaseSection {
   events: Event[];
 }
 
-export type PageSection = HeroSection | SummarySection | TextSection | RowSection;
+export type PageSection =
+  HeroSection |
+  SummarySection |
+  TextSection |
+  RowSection |
+  EventSection;
