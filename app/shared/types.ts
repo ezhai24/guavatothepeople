@@ -31,6 +31,7 @@ export enum ComponentType {
   TEXT_SECTION = 'sections.text-section',
   GRID_SECTION = 'sections.grid-section',
   EVENT_SECTION = 'sections.event-section',
+  CONTACT_SECTION = 'sections.contact-section',
 }
 
 interface BaseSection {
@@ -87,9 +88,20 @@ export interface EventSection extends BaseSection {
   events: Event[];
 }
 
+export interface Contact {
+  title?: string;
+  email: string;
+}
+
+export interface ContactSection extends BaseSection {
+  contacts: Contact[];
+  socials?: Icon[];
+}
+
 export type PageSection =
   HeroSection |
   SummarySection |
   TextSection |
   RowSection |
-  EventSection;
+  EventSection |
+  ContactSection;
