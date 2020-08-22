@@ -7,6 +7,21 @@ export enum ImageAlignment {
   RIGHT = 'right',
 }
 
+export interface Icon {
+  icon: IconImage;
+  link?: string;
+}
+
+export enum IconImage {
+  INSTAGRAM = 'instagram',
+  FACEBOOK = 'facebook',
+  TWITTER = 'twitter',
+  EMAIL = 'email',
+  PATREON = 'patreon',
+  VENMO = 'venmo',
+  CASHAPP = 'cashapp',
+}
+
 /**
  * SECTIONS
  */
