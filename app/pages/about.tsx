@@ -19,7 +19,7 @@ const About = () => {
   return (
     <>
       <PageTitle>About Us</PageTitle>
-      { content.map(section => <PageFactory key={section.id} section={section} />) }
+      {content.map(section => <PageFactory key={section.id} section={section} />)}
     </>
   );
 };

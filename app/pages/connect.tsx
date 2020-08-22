@@ -19,7 +19,7 @@ const Connect = () => {
   return (
     <>
       <PageTitle>Connect</PageTitle>
-      { content.map(section => <PageFactory key={section.id} section={section} />) }
+      {content.map((section, index) => <PageFactory key={index} section={section} />)}
     </>
   );
 };

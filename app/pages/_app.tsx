@@ -33,14 +33,14 @@ const App = ({ Component, pageProps }) => {
       <Loader>
         <Navigation />
         <>
-          { transitions.map(({ item, key, props }) => {
+          {transitions.map(({ item, key, props }) => {
             const { Component, pageProps } = item;
             return (
               <Content key={key} style={props}>
                 <Component {...pageProps} />
               </Content>
             );
-          }) }
+          })}
         </>
       </Loader>
     </>

@@ -39,7 +39,7 @@ const RowCell = (cell: RowCellType) => {
 
 const RowSection = ({ content }: Props) => {
   const { cells } = content;
-  return <Row>{cells.map(cell => <RowCell {...cell} />)}</Row>;
+  return <Row>{cells.map((cell, index) => <RowCell key={index} {...cell} />)}</Row>;
 };
 
 export default RowSection;

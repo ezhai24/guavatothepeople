@@ -19,7 +19,7 @@ const Order = () => {
   return (
     <>
       <PageTitle>Order</PageTitle>
-      { content.map(section => <PageFactory key={section.id} section={section} />) }
+      {content.map((section, index) => <PageFactory key={index} section={section} />)}
     </>
   );
 };
