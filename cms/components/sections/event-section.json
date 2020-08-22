@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_event_sections",
+  "info": {
+    "name": "EventSection",
+    "icon": "calendar-day"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "events": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.event",
+      "required": true
+    }
+  }
+}
