@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_donation_sections",
+  "info": {
+    "name": "DonationSection",
+    "icon": "donate"
+  },
+  "options": {},
+  "attributes": {
+    "organizationName": {
+      "type": "string",
+      "required": true
+    },
+    "organizationLink": {
+      "type": "string"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.icon"
+    }
+  }
+}

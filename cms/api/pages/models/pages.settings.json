@@ -28,7 +28,8 @@
         "sections.summary-section",
         "sections.grid-section",
         "sections.event-section",
-        "sections.contact-section"
+        "sections.contact-section",
+        "sections.donation-section"
       ]
     }
   }
