@@ -111,4 +111,5 @@ export type PageSection =
   TextSection |
   RowSection |
   EventSection |
-  ContactSection;
+  ContactSection |
+  DonationSection;
