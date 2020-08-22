@@ -44,7 +44,7 @@ export interface TextSection extends BaseSection {
   alignImage?: ImageAlignment;
 }
 
-export interface RowCell extends BaseSection {
+export interface RowCell {
   title: string;
   subtitle?: string;
   text: string;

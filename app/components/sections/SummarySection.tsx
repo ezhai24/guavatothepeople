@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import styled from '@emotion/styled';
 
 import { Link } from '~/components';
-import { SummarySection as SummarySectionType } from '~/shared/types';
+import { SummarySection as SummarySectionContent } from '~/shared/types';
 
 const Container = styled.div({
   width: '80%',
@@ -12,7 +12,7 @@ const Container = styled.div({
 });
 
 interface Props {
-  content: SummarySectionType;
+  content: SummarySectionContent;
 }
 
 const SummarySection = ({ content }: Props) => {

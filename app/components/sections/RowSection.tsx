@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 import { Button } from '~/components';
 import { mq } from '~/shared/styles';
-import { RowCell as RowCellType, RowSection as RowSectionType } from '~/shared/types';
+import { RowCell as RowCellType, RowSection as RowSectionContent } from '~/shared/types';
 
 const Row = styled.div({
   display: 'flex',
@@ -20,7 +20,7 @@ const Row = styled.div({
 });
 
 interface Props {
-  content: RowSectionType;
+  content: RowSectionContent;
 }
 
 const RowCell = (cell: RowCellType) => {

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import { Button } from '~/components';
 import { mq } from '~/shared/styles';
-import { HeroSection as HeroSectionType } from '~/shared/types';
+import { HeroSection as HeroSectionContent } from '~/shared/types';
 
 const Hero = styled.div(({ backgroundUrl }: { backgroundUrl: string }) => ({
   display: 'flex',
@@ -41,7 +41,7 @@ const CTA = styled.div({
 });
 
 interface Props {
-  content: HeroSectionType;
+  content: HeroSectionContent;
 }
 
 const HeroSection = ({ content }: Props) => {
