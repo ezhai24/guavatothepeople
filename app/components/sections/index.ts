@@ -5,3 +5,4 @@ export { default as RowSection } from './RowSection';
 export { default as EventSection } from './EventSection';
 export { default as ContactSection } from './ContactSection';
 export { default as DonationSection } from './DonationSection';
+export { default as CarouselSection } from './CarouselSection';

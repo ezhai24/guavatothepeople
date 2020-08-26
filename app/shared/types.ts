@@ -7,6 +7,12 @@ export enum ImageAlignment {
   RIGHT = 'right',
 }
 
+export interface ImageComponent {
+  image: Image;
+  link?: string;
+  caption?: string;
+}
+
 export interface Icon {
   icon: IconImage;
   link?: string;
@@ -33,6 +39,7 @@ export enum ComponentType {
   EVENT_SECTION = 'sections.event-section',
   CONTACT_SECTION = 'sections.contact-section',
   DONATION_SECTION = 'sections.donation-section',
+  CAROUSEL_SECTION = 'sections.carousel-section',
 }
 
 interface BaseSection {
@@ -105,6 +112,11 @@ export interface DonationSection extends BaseSection {
   socials: Icon[];
 }
 
+export interface CarouselSection extends BaseSection {
+  title: string;
+  items: ImageComponent[];
+}
+
 export type PageSection =
   HeroSection |
   SummarySection |
@@ -112,4 +124,5 @@ export type PageSection =
   RowSection |
   EventSection |
   ContactSection |
-  DonationSection;
+  DonationSection |
+  CarouselSection;
