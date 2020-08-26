@@ -29,7 +29,8 @@
         "sections.grid-section",
         "sections.event-section",
         "sections.contact-section",
-        "sections.donation-section"
+        "sections.donation-section",
+        "sections.carousel-section"
       ]
     }
   }
