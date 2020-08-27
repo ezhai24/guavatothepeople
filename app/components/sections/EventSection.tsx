@@ -6,7 +6,7 @@ import { Link } from '~/components';
 import { Event as EventType, EventSection as EventSectionContent } from '~/shared/types';
 
 const Container = styled.div({
-  width: '80%',
+  width: '60%',
   margin: '0 auto 60px',
 });
 

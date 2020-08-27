@@ -5,7 +5,7 @@ import { Link } from '~/components';
 import { ImageComponent, CarouselSection as CarouselSectionContent } from '~/shared/types';
 
 const SectionTitle = styled.h2({
-  width: '80%',
+  width: '60%',
   margin: '0 auto',
 });
 
@@ -13,7 +13,7 @@ const Carousel = styled.div({
   display: 'flex',
   marginTop: 30,
   marginBottom: 60,
-  paddingLeft: 'calc(10% - 20px)',
+  paddingLeft: 'calc(20% - 20px)',
   overflowX: 'scroll',
   whiteSpace: 'nowrap',
 });

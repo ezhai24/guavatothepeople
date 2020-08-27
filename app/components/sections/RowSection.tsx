@@ -8,7 +8,7 @@ import { RowCell as RowCellType, RowSection as RowSectionContent } from '~/share
 
 const Row = styled.div({
   display: 'flex',
-  width: '80%',
+  width: '60%',
   margin: '0 auto 60px',
   '> div': {
     flex: 1,

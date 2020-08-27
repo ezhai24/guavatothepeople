@@ -11,7 +11,7 @@ const Nav = styled.div({
 
 const Logo = styled.img({
   display: 'block',
-  width: '80%',
+  width: '60%',
   maxWidth: '300px',
   margin: '0 auto 30px',
   textAlign: 'center',

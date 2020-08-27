@@ -6,7 +6,7 @@ import { mq } from '~/shared/styles';
 import { TextSection as TextSectionContent, ImageAlignment } from '~/shared/types';
 
 const Container = styled.div({
-  width: '80%',
+  width: '60%',
   margin: '0 auto 60px',
 });
 
