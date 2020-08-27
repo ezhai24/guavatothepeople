@@ -10,6 +10,7 @@ const ButtonContainer = styled.div(({ primary }: { primary: boolean }) => ({
   border: `3px solid ${colors.primary}`,
   padding: '5px 30px',
   backgroundColor: primary ? colors.primary : 'transparent',
+  textAlign: 'center',
   fontWeight: 700,
   color: primary ? 'white' : colors.primary,
   textTransform: 'uppercase',

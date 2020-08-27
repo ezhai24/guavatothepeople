@@ -16,6 +16,12 @@ const Row = styled.div({
   },
   [mq[0]]: {
     flexDirection: 'column',
+    '> div': {
+      marginBottom: 40,
+    },
+    '> div:last-child': {
+      marginBottom: 0,
+    },
   },
 });
 
