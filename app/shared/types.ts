@@ -1,3 +1,8 @@
+interface Link {
+  text: string;
+  link: string;
+}
+
 interface Image {
   url: string;
 }
@@ -26,6 +31,14 @@ export enum IconImage {
   PATREON = 'patreon',
   VENMO = 'venmo',
   CASHAPP = 'cashapp',
+}
+
+export interface Footer {
+  logo?: Image;
+  sections: {
+    title: string;
+    links: Link[];
+  }[];
 }
 
 /**

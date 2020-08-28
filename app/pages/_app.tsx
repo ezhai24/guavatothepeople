@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useTransition, animated } from 'react-spring';
 import styled from '@emotion/styled';
 
-import { Loader, Navigation } from '~/components';
+import { Loader, Navigation, Footer } from '~/components';
 
 const Content = styled(animated.div)({
   width: '100%',
@@ -42,6 +42,7 @@ const App = ({ Component, pageProps }) => {
             );
           })}
         </>
+        <Footer />
       </Loader>
     </>
   );

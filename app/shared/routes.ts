@@ -1,4 +1,4 @@
-const routes = {
+const pageRoutes = {
   home: '/',
   about: '/about',
   blmResources: '/blm',
@@ -10,22 +10,23 @@ const routes = {
 const contentRoute = (pageRoute: string) => {
   const baseUrl = `${process.env.CMS_BASE}/pages?type=`;
   switch (pageRoute) {
-    case routes.home:
+    case pageRoutes.home:
       return baseUrl + 'home';
-    case routes.about:
+    case pageRoutes.about:
       return baseUrl + 'about';
-    case routes.blmResources:
+    case pageRoutes.blmResources:
       return baseUrl + 'blm';
-    case routes.connect:
+    case pageRoutes.connect:
       return baseUrl + 'connect';
-    case routes.order:
+    case pageRoutes.order:
       return baseUrl + 'order';
-    case routes.donate:
+    case pageRoutes.donate:
       return baseUrl + 'donate';
   }
 };
 
 export default {
-  ...routes,
+  ...pageRoutes,
   contentRoute,
+  footerContent: `${process.env.CMS_BASE}/footer`,
 };
