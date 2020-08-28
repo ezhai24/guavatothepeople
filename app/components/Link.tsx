@@ -22,18 +22,19 @@ interface Props {
   href: string;
   children: string | React.ReactChild | React.ReactChild[];
   primary?: boolean;
+  className?: string;
 }
 
 const Link = (props: Props) => {
-  const { href, children, primary } = props;
+  const { href, children, primary, className } = props;
   const isExternal = Object.values(routes).every(route => route !== href);
   return (isExternal ?
-    <ExternalLink primary={primary} href={href}>
+    <ExternalLink primary={primary} href={href} className={className}>
       {children}
     </ExternalLink>
   :
     <NextLink href={href}>
-      <InternalLink primary={primary}>
+      <InternalLink primary={primary} className={className}>
         {children}
       </InternalLink>
     </NextLink>
