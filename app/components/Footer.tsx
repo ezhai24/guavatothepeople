@@ -53,7 +53,7 @@ const Footer = () => {
   return (content ?
     <Container>
       <LogoSection>
-        {content.logo && <img src={content.logo.url} />}
+        <img src={content.logo.url} />
         <div>Icons by <Link href="https://icons8.com/">Icon8</Link></div>
         <div>&#169;2020 <Link href="https://github.com/ezhai24">Emily Zhai</Link></div>
       </LogoSection>
