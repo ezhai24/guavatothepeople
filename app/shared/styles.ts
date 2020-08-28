@@ -5,7 +5,7 @@ export const mq = breakpoints.map(
 
 export const colors = {
   primary: '#EB6652',
-  secondary: '#B30500',
+  secondary: 'gray',
 };
 
 export const images = {

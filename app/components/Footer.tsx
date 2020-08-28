@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 import { Link } from '~/components';
 import { Footer as FooterContent } from '~/shared/types';
-import { mq } from '~/shared/styles';
+import { mq, colors } from '~/shared/styles';
 import routes from '~/shared/routes';
 
 const Container = styled.div({
@@ -18,12 +18,15 @@ const Container = styled.div({
   },
 });
 
-const Logo = styled.div({
+const LogoSection = styled.div({
   flex: 2,
   paddingTop: 35,
   paddingRight: 50,
+  color: colors.secondary,
+  fontSize: 14,
   '> img': {
     width: '100%',
+    marginBottom: 5,
   }
 });
 
@@ -49,7 +52,11 @@ const Footer = () => {
 
   return (content ?
     <Container>
-      {content.logo && <Logo><img src={content.logo.url} /></Logo>}
+      <LogoSection>
+        {content.logo && <img src={content.logo.url} />}
+        <div>Icons by <Link href="https://icons8.com/">Icon8</Link></div>
+        <div>&#169;2020 <Link href="https://github.com/ezhai24">Emily Zhai</Link></div>
+      </LogoSection>
       {content.sections.map(section => (
         <Section>
           <h4>{section.title}</h4>
