@@ -3,9 +3,10 @@ import styled from '@emotion/styled';
 
 import { Link, Icon } from '~/components';
 import { DonationSection as DonationSectionContent } from '~/shared/types';
+import { mq } from '~/shared/styles';
 
 const Container = styled.div({
-  width: '80%',
+  width: '60%',
   margin: '0px auto 60px',
   textAlign: 'center',
 });

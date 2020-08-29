@@ -18,6 +18,7 @@ const Row = styled.div({
     flexDirection: 'column',
     '> div': {
       marginBottom: 40,
+      padding: 0,
     },
     '> div:last-child': {
       marginBottom: 0,

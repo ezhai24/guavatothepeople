@@ -19,6 +19,7 @@ const Container = styled.div({
     width: '60%',
     height: 'auto',
     margin: '0 auto 60px',
+    wordWrap: 'break-word',
   },
 });
 

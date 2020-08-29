@@ -27,7 +27,11 @@ const LogoSection = styled.div({
   '> img': {
     width: '100%',
     marginBottom: 5,
-  }
+  },
+  [mq[0]]: {
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
 });
 
 const Section = styled.div({
