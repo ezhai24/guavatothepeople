@@ -5,7 +5,8 @@ import { Link, Icon } from '~/components';
 import { DonationSection as DonationSectionContent } from '~/shared/types';
 
 const Container = styled.div({
-  marginBottom: 60,
+  width: '80%',
+  margin: '0px auto 60px',
   textAlign: 'center',
 });
 
