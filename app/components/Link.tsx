@@ -6,13 +6,13 @@ import routes from '~/shared/routes';
 import { colors } from '~/shared/styles';
 
 const ExternalLink = styled.a(({ primary }: { primary?: boolean }) => ({
-  color: primary ? colors.primary : 'black',
+  color: colors.primary,
   fontWeight: primary ? 700 : 400,
   cursor: 'pointer',
 }));
 
 const InternalLink = styled.div(({ primary }: { primary?: boolean }) => ({
-  color: primary ? colors.primary : 'black',
+  color: colors.primary,
   fontWeight: primary ? 700 : 400,
   textDecoration: 'underline',
   cursor: 'pointer',

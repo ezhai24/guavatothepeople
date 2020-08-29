@@ -1,5 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import { Global } from '@emotion/core';
+import { colors } from '~/shared/styles';
 
 class Document extends NextDocument {
   render() {
@@ -16,6 +17,9 @@ class Document extends NextDocument {
               },
               'h1, h2': {
                 fontFamily: 'Inconsolata, sans-serif',
+              },
+              a: {
+                color: colors.primary,
               },
             }}
           />
