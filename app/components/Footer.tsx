@@ -41,6 +41,7 @@ const Section = styled.div({
 
 const FooterLink = styled(Link)({
   textDecoration: 'none',
+  color: 'black',
 });
 
 const Footer = () => {
