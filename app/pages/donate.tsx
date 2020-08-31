@@ -1,27 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 
 import { PageTitle, PageFactory } from '~/components';
+import { PageSection } from '~/shared/types';
 import routes from '~/shared/routes';
 
-const Donate = () => {
-  const [content, setContent] = useState([]);
-  
-  useEffect(() => {
-    const getPageContent = async () => {
-      const cmsRoute = routes.contentRoute(routes.donate);
-      const { data } = await axios.get(cmsRoute);
-      setContent(data[0].content);
-    };
-    getPageContent();
-  }, []);
+interface Props {
+  content?: PageSection[];
+}
 
-  return (
-    <>
-      <PageTitle>Donate</PageTitle>
-      {content.map((section, index) => <PageFactory key={index} section={section} />)}
-    </>
-  );
+const Donate = ({ content }: Props) => (
+  <>
+    <PageTitle>Donate</PageTitle>
+    {content && content.map((section, index) => <PageFactory key={index} section={section} />)}
+  </>
+);
+
+export async function getStaticProps() {
+  const cmsRoute = routes.contentRoute(routes.donate);
+  const { data } = await axios.get(cmsRoute);
+  const content = data[0]?.content || null;
+  return {
+    props: {
+      content,
+    },
+  };
 };
 
 export default Donate;

@@ -1,27 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 
 import { PageTitle, PageFactory } from '~/components';
+import { PageSection } from '~/shared/types';
 import routes from '~/shared/routes';
 
-const Connect = () => {
-  const [content, setContent] = useState([]);
-  
-  useEffect(() => {
-    const getPageContent = async () => {
-      const cmsRoute = routes.contentRoute(routes.connect);
-      const { data } = await axios.get(cmsRoute);
-      setContent(data[0].content);
-    };
-    getPageContent();
-  }, []);
+interface Props {
+  content?: PageSection[];
+}
 
-  return (
-    <>
-      <PageTitle>Connect</PageTitle>
-      {content.map((section, index) => <PageFactory key={index} section={section} />)}
-    </>
-  );
+const Connect = ({ content }: Props) => (
+  <>
+    <PageTitle>Connect</PageTitle>
+    {content && content.map((section, index) => <PageFactory key={index} section={section} />)}
+  </>
+);
+
+export async function getStaticProps() {
+  const cmsRoute = routes.contentRoute(routes.connect);
+  const { data } = await axios.get(cmsRoute);
+  const content = data[0]?.content || null;
+  return {
+    props: {
+      content,
+    },
+  };
 };
 
 export default Connect;
