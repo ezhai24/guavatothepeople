@@ -11,13 +11,11 @@ import {
 const Container = styled.div({
   float: 'right',
   width: '30%',
-  height: 'calc(100vh - 303px)',
   marginLeft: 100,
   marginRight: '10%',
   [mq[0]]: {
     float: 'none',
     width: '60%',
-    height: 'auto',
     margin: '0 auto 60px',
     wordWrap: 'break-word',
   },
