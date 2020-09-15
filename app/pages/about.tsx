@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { PageTitle, PageFactory } from '~/components';
+import { PageTitle, SectionFactory } from '~/components';
 import { PageSection } from '~/shared/types';
 import routes from '~/shared/routes';
 
@@ -12,7 +12,7 @@ interface Props {
 const About = ({ content }: Props) => (
   <>
     <PageTitle>About Us</PageTitle>
-    {content && content.map((section, index) => <PageFactory key={index} section={section} />)}
+    {content && content.map((section, index) => <SectionFactory key={index} section={section} />)}
   </>
 );
 

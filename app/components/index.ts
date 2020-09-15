@@ -11,4 +11,4 @@ export { default as Icon } from './Icon';
 export { default as Loader } from './Loader';
 export { default as Navigation } from './Navigation';
 export { default as Footer } from './Footer';
-export { default as PageFactory } from './PageFactory';
+export { default as SectionFactory } from './SectionFactory';

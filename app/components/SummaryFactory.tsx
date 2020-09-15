@@ -27,7 +27,7 @@ interface Props {
   section: PageSection;
 }
 
-const PageFactory = ({ section }: Props) => {
+const SectionFactory = ({ section }: Props) => {
   switch (section.__component) {
     case ComponentType.HERO_SECTION:
       return <HeroSection content={section as HeroSectionContent} />;
@@ -48,4 +48,4 @@ const PageFactory = ({ section }: Props) => {
   }
 };
 
-export default PageFactory;
+export default SectionFactory;
