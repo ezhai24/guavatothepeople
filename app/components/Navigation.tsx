@@ -9,12 +9,15 @@ const Nav = styled.div({
   margin: '50px 0',
 });
 
-const Logo = styled.img({
+const Logo = styled.div({
   display: 'block',
   width: '60%',
-  maxWidth: '300px',
-  margin: '0 auto 30px',
+  maxWidth: '200px',
+  margin: '0 auto 25px',
   textAlign: 'center',
+  '& img': {
+    width: '100%',
+  },
 });
 
 const Menu = styled.div({
@@ -43,9 +46,11 @@ const Menu = styled.div({
 const Navigation = () => {
   return (
     <Nav>
-      <Link href={routes.home}>
-        <a><Logo src={images.logo} /></a>
-      </Link>
+      <Logo>
+        <Link href={routes.home}>
+          <a><img src={images.logo} /></a>
+        </Link>
+      </Logo>
       <Menu>
         <Link href={routes.about}>
           <a>About</a>

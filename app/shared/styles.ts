@@ -9,5 +9,5 @@ export const colors = {
 };
 
 export const images = {
-  logo: '/logo.png',
+  logo: '/logo.jpg',
 };
