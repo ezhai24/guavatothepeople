@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "CMS and admin interface for Guava to the People website",
   "scripts": {
+    "deps": "bash scripts/deps.sh",
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
