@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { PopupText } from 'react-calendly';
 import styled from '@emotion/styled';
 
 import routes from '~/shared/routes';
@@ -19,12 +20,34 @@ const ButtonContainer = styled.div(({ primary }: { primary: boolean }) => ({
 
 interface Props {
   href: string;
-  children: string | React.ReactChild | React.ReactChild[];
+  children: string;
   primary?: boolean;
 }
 
 export const Button = (props: Props) => {
   const { href, children, primary } = props;
+
+  const isCalendlyLink = (new URL(href))?.hostname === 'calendly.com';
+  if (isCalendlyLink) {
+    return (
+      <PopupText
+        text={children}
+        url={href}
+        styles={{
+          border: `3px solid ${colors.primary}`,
+          padding: '5px 30px',
+          backgroundColor: primary ? colors.primary : 'transparent',
+          textAlign: 'center',
+          fontWeight: 700,
+          color: primary ? 'white' : colors.primary,
+          textTransform: 'uppercase',
+          textDecoration: 'none',
+          cursor: 'pointer',
+        }}
+      />
+    );
+  }
+
   const isExternal = Object.values(routes).every(route => route !== href);
   return (isExternal ?
     <a href={href}>
