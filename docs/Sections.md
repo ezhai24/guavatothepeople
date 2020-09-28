@@ -1,10 +1,11 @@
 ## Sections
-**An important note on `actionLink`**
+**An important note on `actionLink`**  
 The `actionLink` property can be set to one of three types of URLs
 - External URLs - To link to an external site, set `actionLink` to the *full URL* (ie. `https://www.google.com/`)
 - Internal URLs - To link to an internal page on the site, set `actionLink` to the *relative URL* (ie. `/about`)
 - Calendly shortcut - To link to a Calendly popup, set `actionLink` to the *Calendly URL* (ie. `https://calendly.com/guavatothepeople/pastelito-pick-up`)
 
+<br/>
 Section components allow admins to render site content in a number of different formats.
 
 Each section has an `id` and `__component` prop that identifies it. The `__component` prop is of type `ComponentType` which is structured as follows.
