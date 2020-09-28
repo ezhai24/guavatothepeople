@@ -7,6 +7,9 @@
   curl -X POST https://api.vercel.com/v1/integrations/deploy/QmWU6JaTxDrnmjABpR2Rs7zK7ZZwo9ai1MKNboQo6VqXj4/H2tv5VRZNH
   ```
 
+### Making Content Changes
+All content changes to the production site can and should be made through the [CMS](guavatothepeople.herokuapp.com/admin). To learn more about the types of sections you can add/remove/modify, view the docs [here](./Sections.md).
+
 ### Development
 In the `cms` directory...
 
